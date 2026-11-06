@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kegelmaster.github.io/sitemap.xml

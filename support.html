@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trung Tâm Hỗ Trợ & Xóa Dữ Liệu - Kegel Master</title>
+  <meta name="description" content="Trung tâm trợ giúp chính thức của ứng dụng Kegel Master - Hướng dẫn khắc phục sự cố, gửi yêu cầu trợ giúp và quy trình xóa tài khoản người dùng theo chuẩn Apple & Google.">
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#07090e] text-slate-100 min-h-screen">
+  <div class="bg-mesh"></div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/icon.png" alt="Kegel Master Logo" class="w-10 h-10 rounded-xl shadow-lg shadow-cyan-500/20">
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">Kegel Master</span>
+          <span class="text-[10px] text-slate-400 font-medium tracking-widest uppercase">Trung Tâm Hỗ Trợ</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="index.html" class="hover:text-cyan-400 transition-colors">Trang Chủ</a>
+        <a href="privacy.html" class="hover:text-cyan-400 transition-colors">Chính Sách Quyền Riêng Tư</a>
+        <a href="terms.html" class="hover:text-cyan-400 transition-colors">Điều Khoản Dịch Vụ</a>
+      </nav>
+
+      <a href="index.html" class="px-4 py-2 rounded-xl glass-panel text-xs font-bold text-slate-200 hover:text-cyan-400 transition">
+        &larr; Về Trang Chủ
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Support Content -->
+  <main class="pt-36 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="glass-panel p-8 sm:p-12 border-slate-800">
+      
+      <div class="mb-10 text-center sm:text-left border-b border-slate-800 pb-8">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold mb-4">
+          <i data-lucide="life-buoy" class="w-4 h-4"></i>
+          <span>Trung Tâm Trợ Giúp &amp; Đồng Hành</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Hỗ Trợ Khách Hàng &amp; Xóa Dữ Liệu</h1>
+        <p class="text-xs text-slate-400 mt-2">
+          Đội ngũ phát triển Kegel Master luôn sẵn sàng lắng nghe và giải đáp mọi thắc mắc của bạn 24/7.
+        </p>
+      </div>
+
+      <!-- Quick Contact Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div class="glass-panel p-6 border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Email Hỗ Trợ Trực Tiếp</h3>
+          <p class="text-xs text-slate-300 mb-4">Phản hồi các vấn đề kỹ thuật, đồng bộ lỗi hoặc tư vấn tính năng trong vòng 24 giờ.</p>
+          <a href="mailto:kegelmaster.app@gmail.com" class="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 hover:underline">
+            kegelmaster.app@gmail.com &rarr;
+          </a>
+        </div>
+
+        <div class="glass-panel p-6 border-slate-800 hover:border-emerald-500/40 transition">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Đóng Góp &amp; Báo Lỗi GitHub</h3>
+          <p class="text-xs text-slate-300 mb-4">Theo dõi cập nhật phiên bản, báo cáo bug hoặc đề xuất ý tưởng cải tiến ứng dụng.</p>
+          <a href="https://github.com/KegelMaster/KegelMaster/issues" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:underline">
+            Tạo Issue trên GitHub &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Section: Troubleshooting -->
+      <section class="mb-14">
+        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2 border-b border-slate-800 pb-3">
+          <i data-lucide="wrench" class="w-5 h-5 text-cyan-400"></i>
+          Hướng Dẫn Khắc Phục Sự Cố Thường Gặp
+        </h2>
+
+        <div class="space-y-4">
+          <!-- Trouble 1 -->
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <h4 class="font-bold text-sm text-cyan-300 mb-2">1. Live Activities / Dynamic Island không hiển thị trên iPhone?</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Vui lòng kiểm tra trên iPhone của bạn: Vào <strong>Cài Đặt (iOS Settings) &gt; Kegel Master &gt; Hoạt động trực tiếp (Live Activities)</strong> và đảm bảo công tắc đã được bật. Tính năng này yêu cầu thiết bị chạy phiên bản iOS 16.1 trở lên.
+            </p>
+          </div>
+
+          <!-- Trouble 2 -->
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <h4 class="font-bold text-sm text-cyan-300 mb-2">2. Không cảm nhận được rung (Haptics) khi tập?</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Trên một số dòng máy Android, tính năng rung phản hồi hệ thống (Haptic Feedback) có thể bị tắt trong chế độ Tiết kiệm pin. Bạn hãy vào <strong>Cài Đặt ứng dụng &gt; Cường Độ Rung Haptic</strong> và thử chọn mức <em>Mạnh</em> hoặc kiểm tra lại cài đặt rung trong menu Hệ thống của máy.
+            </p>
+          </div>
+
+          <!-- Trouble 3 -->
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <h4 class="font-bold text-sm text-cyan-300 mb-2">3. Làm sao để khôi phục dữ liệu khi chuyển sang máy mới?</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Nếu bạn đã đăng nhập tài khoản Google trên máy cũ, chỉ cần tải ứng dụng Kegel Master trên máy mới và chọn đăng nhập cùng tài khoản Google đó. Thuật toán Bidirectional Smart Merge của chúng tôi sẽ tự động tải về đầy đủ chuỗi ngày Streak và các huy hiệu đã mở khóa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Dedicated Account Deletion (Apple Guideline 5.1.1(v) Compliant) -->
+      <section id="delete-account" class="p-6 sm:p-8 rounded-2xl bg-rose-500/5 border border-rose-500/20">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="trash-2" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Yêu Cầu Xóa Tài Khoản &amp; Dữ Liệu Cá Nhân</h3>
+            <span class="text-[11px] text-slate-400">Tuân thủ nghiêm ngặt Apple App Store Guideline 5.1.1(v) &amp; Google Play User Data Policy</span>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-300 leading-relaxed mb-6">
+          Bạn có toàn quyền xóa bỏ vĩnh viễn tài khoản và toàn bộ dữ liệu bài tập đã lưu trữ trên đám mây Supabase bất cứ lúc nào. Khi thực hiện xóa, toàn bộ thông tin tài khoản (Email, tên hiển thị, lịch sử bài tập, chuỗi ngày) sẽ bị xóa hoàn toàn khỏi cơ sở dữ liệu và <strong>không thể khôi phục lại</strong>.
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+            <span class="text-xs font-bold text-white block mb-1">Cách 1: Thao tác tự động ngay trong ứng dụng</span>
+            <p class="text-xs text-slate-400">
+              Mở <strong>Kegel Master &gt; Cài Đặt &gt; Hồ Sơ &amp; Đám Mây &gt; Xóa Tài Khoản Vĩnh Viễn</strong>. Hệ thống sẽ kích hoạt lệnh xóa tài khoản tức thì mà không cần chờ đợi xét duyệt.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+            <span class="text-xs font-bold text-white block mb-1">Cách 2: Gửi thư điện tử yêu cầu xóa thủ công</span>
+            <p class="text-xs text-slate-400 mb-3">
+              Nếu bạn đã xóa ứng dụng khỏi thiết bị, vui lòng gửi email yêu cầu trực tiếp về địa chỉ:
+            </p>
+            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-cyan-300">
+              Gửi tới: kegelmaster.app@gmail.com<br>
+              Tiêu đề: Yêu Cầu Xóa Dữ Liệu Tài Khoản Kegel Master<br>
+              Nội dung: Vui lòng cung cấp chính xác địa chỉ Email Google đã dùng để đăng nhập.
+            </div>
+            <p class="text-[11px] text-slate-500 mt-2">
+              * Chúng tôi sẽ xác minh và xóa bỏ hoàn toàn dữ liệu trong vòng 24 - 48 giờ làm việc, đồng thời gửi thông báo xác nhận hoàn tất qua email cho bạn.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-slate-950 border-t border-slate-800 text-xs text-slate-500 text-center">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex justify-center gap-6">
+        <a href="index.html" class="hover:text-slate-300">Trang Chủ</a>
+        <a href="privacy.html" class="hover:text-slate-300">Quyền Riêng Tư</a>
+        <a href="terms.html" class="hover:text-slate-300">Điều Khoản Dịch Vụ</a>
+        <a href="support.html" class="text-cyan-400 font-semibold">Hỗ Trợ &amp; Xóa Dữ Liệu</a>
+      </div>
+      <div>Bản quyền © 2026 Kegel Master. Mọi quyền được bảo lưu.</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

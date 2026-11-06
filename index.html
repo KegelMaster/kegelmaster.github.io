@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kegel Master - Làm Chủ Cơ Sàn Chậu • Tối Ưu Sinh Lực & Bản Lĩnh Nam Giới</title>
+  <meta name="description" content="Kegel Master - Ứng dụng huấn luyện cơ sàn chậu (PC) chuyên sâu chuẩn y khoa dành cho nam giới. Đồng hồ Bio-Clock 120Hz, iOS Dynamic Island & Lộ trình thông minh.">
+  <meta name="keywords" content="Kegel Master, bài tập kegel cho nam, cơ sàn chậu, cơ PC, sức khỏe nam giới, tăng sinh lực, bio-clock, ios live activity">
+  <meta property="og:title" content="Kegel Master - Huấn Luyện Cơ Sàn Chậu Chuyên Sâu Cho Nam Giới">
+  <meta property="og:description" content="Tối ưu bản lĩnh và sức khỏe nam giới cùng Kegel Master với phản hồi xúc giác rung sinh học, bài tập cá nhân hóa và Live Activities.">
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta property="og:url" content="https://kegelmaster.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#07090e',
+              cyan: '#06b6d4',
+              emerald: '#10b981',
+              violet: '#8b5cf6',
+              amber: '#f59e0b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#07090e] text-slate-100 min-h-screen">
+  <div class="bg-mesh"></div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/icon.png" alt="Kegel Master Logo" class="w-10 h-10 rounded-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300">
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">Kegel Master</span>
+          <span class="text-[10px] text-slate-400 font-medium tracking-widest uppercase">Bio-Conditioning Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#features" class="hover:text-cyan-400 transition-colors">Tính Năng</a>
+        <a href="#science" class="hover:text-cyan-400 transition-colors">Khoa Học</a>
+        <a href="#routines" class="hover:text-cyan-400 transition-colors">Lộ Trình</a>
+        <a href="#faq" class="hover:text-cyan-400 transition-colors">Hỏi Đáp</a>
+        <a href="support.html" class="hover:text-cyan-400 transition-colors">Hỗ Trợ</a>
+      </nav>
+
+      <!-- App Download Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#download" class="relative group overflow-hidden rounded-xl p-[1px] focus:outline-none">
+          <span class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-500 rounded-xl group-hover:opacity-100 transition-opacity"></span>
+          <span class="relative px-5 py-2.5 rounded-xl bg-slate-950 flex items-center gap-2 text-sm font-bold text-white group-hover:bg-opacity-90 transition">
+            <i data-lucide="download" class="w-4 h-4 text-cyan-400"></i>
+            Tải Ứng Dụng
+          </span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 space-y-3 glass-nav border-t border-slate-800">
+      <a href="#features" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Tính Năng</a>
+      <a href="#science" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Khoa Học</a>
+      <a href="#routines" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Lộ Trình</a>
+      <a href="#faq" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Hỏi Đáp</a>
+      <a href="support.html" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium">Hỗ Trợ & Liên Hệ</a>
+      <a href="privacy.html" class="block py-2 text-slate-400 hover:text-slate-200 text-sm">Chính Sách Quyền Riêng Tư</a>
+      <a href="terms.html" class="block py-2 text-slate-400 hover:text-slate-200 text-sm">Điều Khoản Dịch Vụ</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-36 pb-24 lg:pt-44 lg:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Copy & CTA -->
+        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-semibold tracking-wide">
+            <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-ping"></span>
+            <span>Ứng Dụng Huấn Luyện Cơ Sàn Chậu Chuẩn Y Khoa</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+            Làm Chủ <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">Cơ Sàn Chậu</span>.<br>
+            Tối Ưu Bản Lĩnh Phái Mạnh.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Kegel Master được xây dựng dựa trên nền tảng sinh cơ học Arnold Kegel, kết hợp công nghệ phản hồi rung sinh học <strong>Bio-Clock</strong>, hệ thống bài tập tự thích ứng và khả năng theo dõi trực tiếp qua <strong>iOS Dynamic Island</strong>.
+          </p>
+
+          <!-- Store Buttons & Status -->
+          <div id="download" class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <!-- App Store -->
+            <a href="#download" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl glass-panel border-slate-700 hover:border-cyan-500/50 flex items-center gap-4 transition-all duration-300 group">
+              <i data-lucide="apple" class="w-8 h-8 text-white group-hover:scale-110 transition-transform"></i>
+              <div class="text-left">
+                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Tải trên</div>
+                <div class="text-base font-bold text-white group-hover:text-cyan-400 transition-colors">App Store</div>
+              </div>
+              <span class="ml-2 px-2 py-0.5 rounded text-[10px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Chuẩn bị lên sóng</span>
+            </a>
+
+            <!-- Google Play -->
+            <a href="#download" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl glass-panel border-slate-700 hover:border-emerald-500/50 flex items-center gap-4 transition-all duration-300 group">
+              <i data-lucide="play" class="w-7 h-7 text-emerald-400 group-hover:scale-110 transition-transform"></i>
+              <div class="text-left">
+                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Khám phá trên</div>
+                <div class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors">Google Play</div>
+              </div>
+              <span class="ml-2 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Chuẩn bị lên sóng</span>
+            </a>
+          </div>
+
+          <!-- Quick Trust Badges -->
+          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400 font-medium">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+              <span>100% Offline-First Bảo Mật</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+              <span>Đồ Họa 120 FPS ProMotion</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="smartphone" class="w-4 h-4 text-cyan-400"></i>
+              <span>Hỗ trợ Live Activities & Android</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Phone Mockup -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-72 sm:w-80 lg:w-84 animate-float">
+            <!-- Glowing background aura -->
+            <div class="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 rounded-[50px] blur-2xl opacity-75"></div>
+            
+            <!-- Phone Frame -->
+            <div class="relative rounded-[45px] p-3 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-900 shadow-2xl border border-slate-700/60">
+              <div class="relative rounded-[36px] bg-[#07090E] p-5 overflow-hidden border border-slate-800/80">
+                
+                <!-- Dynamic Island Simulation -->
+                <div class="w-28 h-6 bg-black rounded-full mx-auto mb-6 flex items-center justify-between px-3 border border-slate-800">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span class="text-[9px] font-bold text-cyan-400">SIẾT CHẶT</span>
+                  </div>
+                  <span class="text-[9px] font-mono text-slate-300">00:05</span>
+                </div>
+
+                <!-- Clock / Routine Screen Simulation -->
+                <div class="text-center space-y-4">
+                  <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Giáo Án Sơ Cấp • Chặng 1</div>
+                  
+                  <!-- Bio Orb Countdown Ring -->
+                  <div class="relative w-44 h-44 mx-auto flex items-center justify-center">
+                    <div class="absolute inset-0 rounded-full border-4 border-cyan-500/20"></div>
+                    <div class="absolute inset-0 rounded-full border-4 border-cyan-400 border-t-transparent animate-pulse-ring"></div>
+                    <div class="flex flex-col items-center">
+                      <span class="text-3xl font-extrabold text-white tracking-tight">00:04</span>
+                      <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Siết Cơ PC</span>
+                      <span class="text-[10px] text-slate-400 mt-1">Lần 4 / 10</span>
+                    </div>
+                  </div>
+
+                  <!-- Mini Stats Pill -->
+                  <div class="grid grid-cols-2 gap-2 pt-2">
+                    <div class="glass-panel p-2.5 rounded-xl text-left border-slate-800">
+                      <div class="text-[10px] text-slate-400">Chuỗi Ngày</div>
+                      <div class="text-sm font-extrabold text-amber-400 flex items-center gap-1">
+                        <i data-lucide="flame" class="w-3.5 h-3.5"></i> 14 Ngày
+                      </div>
+                    </div>
+                    <div class="glass-panel p-2.5 rounded-xl text-left border-slate-800">
+                      <div class="text-[10px] text-slate-400">Bio-Score</div>
+                      <div class="text-sm font-extrabold text-emerald-400 flex items-center gap-1">
+                        <i data-lucide="trending-up" class="w-3.5 h-3.5"></i> 92/100
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Control bar -->
+                  <div class="pt-2 flex items-center justify-center gap-3">
+                    <div class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-slate-300">
+                      <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                    </div>
+                    <div class="px-6 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/25">
+                      ĐANG TẬP
+                    </div>
+                    <div class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-slate-300">
+                      <i data-lucide="volume-2" class="w-4 h-4"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section -->
+  <section id="features" class="py-24 relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-extrabold">Công Nghệ & Trải Nghiệm</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Được Tinh Chỉnh Cho Từng Nhịp Co Sàn Chậu</p>
+        <p class="text-slate-400 text-base">Từ thuật toán đếm nhịp siêu mượt đến khả năng rung phản hồi xúc giác chính xác từng mili-giây.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Feature 1: Bio-Clock Studio -->
+        <div class="glass-panel p-8 space-y-4 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="timer" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Bio-Clock Studio 120Hz</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Lựa chọn giữa 5 kiểu đồng hồ đếm ngược sinh học: Hào quang kép Halo Arc, Bio-Orb 3D, Lõi Sci-Fi Arc Reactor HUD và Tối Giản OLED.
+          </p>
+        </div>
+
+        <!-- Feature 2: Smart Routines -->
+        <div class="glass-panel p-8 space-y-4 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">4 Cấp Độ Lộ Trình Chuẩn Hóa</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Phân tầng khoa học từ Sơ cấp (làm quen nhịp siết), Trung cấp, Cao cấp đến Master với các kỹ thuật Siết giữ lâu (Endurance) & Nhấp nhanh (Speed Kegel).
+          </p>
+        </div>
+
+        <!-- Feature 3: Live Activities & Dynamic Island -->
+        <div class="glass-panel p-8 space-y-4 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400">
+            <i data-lucide="bell" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">iOS Live Activities & Dynamic Island</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Theo dõi từng nhịp co/nhả trực tiếp ngay trên Màn hình khóa và đảo Dynamic Island mà không cần mở sáng màn hình hay gián đoạn công việc.
+          </p>
+        </div>
+
+        <!-- Feature 4: Privacy & Offline-First -->
+        <div class="glass-panel p-8 space-y-4 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Bảo Mật Offline-First Tuyệt Đối</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Dữ liệu bài tập và sinh lý của bạn được lưu trữ an toàn trong máy. Hỗ trợ sao lưu đám mây Supabase bảo mật cao khi bạn chọn đồng bộ.
+          </p>
+        </div>
+
+        <!-- Feature 5: AI Coach -->
+        <div class="glass-panel p-8 space-y-4 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Trợ Lý AI Coach Độc Quyền</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Tích hợp Gemini AI thông minh giúp giải đáp kỹ thuật siết đúng nhóm cơ PC, tránh co thắt nhầm cơ đùi/mông và tư vấn điều chỉnh nhịp thở sâu.
+          </p>
+        </div>
+
+        <!-- Feature 6: Trends & Badges -->
+        <div class="glass-panel p-8 space-y-4 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Bio-Trends & Huy Hiệu Vinh Danh</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Biểu đồ xu hướng 7 ngày trực quan, tính toán chuỗi ngày rèn luyện liên tục và mở khóa hệ thống huy hiệu thành tích độc đáo.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Scientific Foundation Section -->
+  <section id="science" class="py-24 relative bg-slate-950/60 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs uppercase tracking-widest text-emerald-400 font-extrabold">Nền Tảng Khoa Học</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Tại Sao Nam Giới Cần Tập Cơ Sàn Chậu (PC)?</h2>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Cơ mu cụt (Pubococcygeus - PC) là nhóm cơ võng nằm ở đáy chậu, nâng đỡ bàng quang, trực tràng và kiểm soát hoạt động sinh lý. Được giới thiệu bởi Bác sĩ Arnold Kegel vào năm 1948, phương pháp này đã được y học hiện đại chứng minh mang lại lợi ích to lớn:
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-full bg-emerald-500/20 text-emerald-400 mt-1">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">Tăng Cường Khả Năng Kiểm Soát & Bền Bỉ</h4>
+                <p class="text-slate-400 text-sm">Giúp bạn chủ động kiềm chế phản xạ xuất tinh, kéo dài thời gian và làm chủ nhịp điệu thăng hoa.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-full bg-cyan-500/20 text-cyan-400 mt-1">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">Cải Thiện Lưu Lượng Máu & Độ Cương Cứng</h4>
+                <p class="text-slate-400 text-sm">Cơ PC khỏe giữ máu lưu lại ở thể hang tốt hơn, mang lại trạng thái cương cứng vững vàng và tự tin.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-full bg-violet-500/20 text-violet-400 mt-1">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-base">Bảo Vệ Tuyến Tiền Liệt & Kiểm Soát Bàng Quang</h4>
+                <p class="text-slate-400 text-sm">Hạn chế hiện tượng tiểu són, tiểu ngập ngừng và thúc đẩy tuần hoàn máu giảm viêm vùng chậu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="glass-panel p-8 sm:p-10 border-cyan-500/30 relative">
+            <div class="text-xs uppercase tracking-wider text-cyan-400 font-bold mb-3 flex items-center gap-2">
+              <i data-lucide="info" class="w-4 h-4"></i>
+              Cách Xác Định Cơ PC Trong 3 Giây
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Làm thế nào để biết bạn đang siết đúng cơ PC?</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Khi bạn đang đi tiểu, hãy thử chủ động ngắt dòng nước tiểu giữa chừng mà không gồng cơ bụng, cơ đùi hay cơ mông. Nhóm cơ chịu trách nhiệm thắt lại chính là <strong>Cơ PC (Cơ Sàn Chậu)</strong> của bạn.
+            </p>
+            <div class="legal-box-warning text-xs text-amber-200">
+              <strong>Lưu ý y khoa quan trọng:</strong> Chỉ thực hiện động tác ngắt dòng tiểu 1-2 lần để nhận biết vị trí cơ. Không nên ngắt tiểu thường xuyên khi bàng quang đang xả vì có thể gây ứ đọng nước tiểu.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Medical Disclaimer Notice -->
+  <section class="py-12 bg-slate-900/50 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center gap-5 p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200">
+        <i data-lucide="alert-triangle" class="w-10 h-10 text-amber-400 flex-shrink-0"></i>
+        <div class="text-xs sm:text-sm leading-relaxed">
+          <strong class="font-bold text-amber-300 block mb-1">Khuyến Cáo Y Tế & Giới Hạn Pháp Lý (Medical Disclaimer):</strong>
+          Kegel Master là ứng dụng rèn luyện thể chất và theo dõi thói quen cho người trưởng thành khỏe mạnh, không phải là thiết bị y tế và không thay thế cho bất kỳ chẩn đoán, điều trị hay đơn thuốc của bác sĩ. Nếu bạn đang bị đau vùng chậu mạn tính, viêm tuyến tiền liệt cấp hoặc vừa trải qua phẫu thuật, vui lòng tham khảo ý kiến chuyên gia y tế trước khi luyện tập.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-24 relative border-t border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-extrabold">Giải Đáp Thắc Mắc</h2>
+        <p class="text-3xl font-extrabold text-white">Những Câu Hỏi Thường Gặp</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="glass-panel p-6 rounded-2xl group transition-all duration-300">
+          <summary class="flex justify-between items-center cursor-pointer font-bold text-white text-base">
+            <span>Tập Kegel bao lâu thì nhận thấy kết quả rõ rệt?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+            Hầu hết người dùng duy trì tập đều đặn từ 5-10 phút mỗi ngày sẽ nhận thấy cải thiện rõ rệt về sức bền cơ bắp và khả năng kiểm soát xuất tinh sau <strong>3 đến 6 tuần</strong>. Điều cốt lõi là tính kiên trì và siết đúng cơ mà không gồng cơ bụng.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="glass-panel p-6 rounded-2xl group transition-all duration-300">
+          <summary class="flex justify-between items-center cursor-pointer font-bold text-white text-base">
+            <span>Dữ liệu sinh học của tôi có được bảo mật không?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+            Kegel Master cam kết 100% nguyên tắc <strong>Offline-First</strong>. Toàn bộ lịch sử rèn luyện, cấp độ và số lần siết cơ được lưu trực tiếp trên thiết bị của bạn. Chúng tôi KHÔNG BAO GIỜ bán hay chia sẻ dữ liệu sức khỏe của bạn cho bất kỳ đơn vị quảng cáo nào.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="glass-panel p-6 rounded-2xl group transition-all duration-300">
+          <summary class="flex justify-between items-center cursor-pointer font-bold text-white text-base">
+            <span>Làm thế nào để yêu cầu xóa toàn bộ tài khoản và dữ liệu?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+            Bạn có thể xóa tài khoản và toàn bộ dữ liệu đám mây bất kỳ lúc nào trực tiếp trong ứng dụng tại mục: <strong>Cài Đặt &gt; Hồ Sơ &gt; Xóa Tài Khoản Vĩnh Viễn</strong> hoặc gửi yêu cầu xóa qua trang <a href="support.html" class="text-cyan-400 underline">Hỗ Trợ &amp; Xóa Dữ Liệu</a>. Mọi thông tin sẽ được xóa hoàn toàn và vĩnh viễn khỏi máy chủ.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="glass-panel p-6 rounded-2xl group transition-all duration-300">
+          <summary class="flex justify-between items-center cursor-pointer font-bold text-white text-base">
+            <span>Ứng dụng hỗ trợ những dòng máy nào?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+            Kegel Master tương thích với các thiết bị iPhone chạy iOS 15.0 trở lên (hỗ trợ Live Activities &amp; Dynamic Island từ iOS 16.1+) và hầu hết các dòng máy Android 8.0+ (hỗ trợ phản hồi rung sinh học đa cấp độ).
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-16 bg-slate-950 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Brand Col -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/icon.png" alt="Kegel Master" class="w-9 h-9 rounded-xl">
+            <span class="text-lg font-extrabold text-white">Kegel Master</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Hệ sinh thái rèn luyện cơ sàn chậu chuyên sâu, định hình thể lực và nâng cao chất lượng cuộc sống nam giới.
+          </p>
+          <div class="text-xs text-slate-500">
+            Email hỗ trợ: <a href="mailto:kegelmaster.app@gmail.com" class="text-cyan-400 hover:underline">kegelmaster.app@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Links: App -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Khám Phá</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#features" class="hover:text-cyan-400 transition-colors">Tính Năng Cốt Lõi</a></li>
+            <li><a href="#science" class="hover:text-cyan-400 transition-colors">Khoa Học Cơ Sàn Chậu</a></li>
+            <li><a href="#faq" class="hover:text-cyan-400 transition-colors">Câu Hỏi Thường Gặp</a></li>
+            <li><a href="support.html" class="hover:text-cyan-400 transition-colors">Trung Tâm Hỗ Trợ</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Legal -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Pháp Lý &amp; Điều Khoản</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="privacy.html" class="hover:text-cyan-400 transition-colors">Chính Sách Quyền Riêng Tư (Privacy)</a></li>
+            <li><a href="terms.html" class="hover:text-cyan-400 transition-colors">Điều Khoản Dịch Vụ (Terms)</a></li>
+            <li><a href="terms.html#disclaimer" class="hover:text-cyan-400 transition-colors">Tuyên Bố Miễn Trừ Y Tế</a></li>
+            <li><a href="support.html#delete-account" class="hover:text-cyan-400 transition-colors">Yêu Cầu Xóa Dữ Liệu Tài Khoản</a></li>
+          </ul>
+        </div>
+
+        <!-- Repository -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Mã Nguồn Mở</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Được phát triển với Flutter Native Engine &amp; Supabase Cloud.
+          </p>
+          <a href="https://github.com/KegelMaster/KegelMaster" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-cyan-400 hover:text-cyan-300">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          Bản quyền © 2026 Kegel Master. Mọi quyền được bảo lưu.
+        </div>
+        <div class="flex gap-6">
+          <a href="privacy.html" class="hover:text-slate-400">Quyền Riêng Tư</a>
+          <a href="terms.html" class="hover:text-slate-400">Điều Khoản</a>
+          <a href="support.html" class="hover:text-slate-400">Hỗ Trợ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
